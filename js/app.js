@@ -2,7 +2,6 @@
 // GLOBAL variables
 //-------------------
 let model;
-
 var canvasWidth           	= 150;
 var canvasHeight 			= 150;
 var canvasStrokeStyle		= "white";
@@ -208,7 +207,7 @@ function preprocessCanvas(image) {
 	    .expandDims()
 	    .toFloat();
 
-	return tensor.div(255.);
+	return tensor.div(tf.scalar(255.0));
 }
 
 function drawTopResult(top_k){
